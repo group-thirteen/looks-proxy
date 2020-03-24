@@ -1,0 +1,29 @@
+{
+  "name": "looks-proxy",
+  "version": "1.0.0",
+  "description": "Proxy server for looks repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/group-thirteen/looks-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/group-thirteen/looks-proxy/issues"
+  },
+  "homepage": "https://github.com/group-thirteen/looks-proxy#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy": "^1.18.0",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
