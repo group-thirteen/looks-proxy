@@ -13,7 +13,7 @@ app.listen(port, () => {
 app.use(express.static(path.join(__dirname, '../public')));
 
 const imagesTarget = 'http://ec2-3-101-33-181.us-west-1.compute.amazonaws.com/';
-const lookTarget = 'http://ec2-18-144-75-47.us-west-1.compute.amazonaws.com/';
+const lookTarget = 'http://ec2-18-144-75-47.us-west-1.compute.amazonaws.com';
 const reviewTarget = 'http://localhost:8080';
 
 app.all('/images/:id', (req, res) => {
@@ -33,5 +33,17 @@ app.all('/reviews', (req, res) => {
 
 app.all('/api/updateLikes', (req, res) => {
   console.log('redirecting to server2');
+  apiProxy.web(req, res, { target: lookTarget });
+});
+
+app.get('/unliked.*', (req, res) => {
+  apiProxy.web(req, res, { target: lookTarget });
+});
+
+app.get('/liked.*', (req, res) => {
+  apiProxy.web(req, res, { target: lookTarget });
+});
+
+app.get('/shareicon.*', (req, res) => {
   apiProxy.web(req, res, { target: lookTarget });
 });
