@@ -31,7 +31,7 @@ app.all('/reviews', (req, res) => {
   apiProxy.web(req, res, { target: reviewTarget });
 });
 
-app.all('/api/updateLike', (req, res) => {
+app.all('/api/updateLikes', (req, res) => {
   console.log('redirecting to server2');
   apiProxy.web(req, res, { target: lookTarget });
 });
