@@ -35,15 +35,3 @@ app.all('/api/updateLikes', (req, res) => {
   console.log('redirecting to server2');
   apiProxy.web(req, res, { target: lookTarget });
 });
-
-app.get('/unliked.*', (req, res) => {
-  apiProxy.web(req, res, { target: lookTarget });
-});
-
-app.get('/liked.*', (req, res) => {
-  apiProxy.web(req, res, { target: lookTarget });
-});
-
-app.get('/shareicon.*', (req, res) => {
-  apiProxy.web(req, res, { target: lookTarget });
-});
